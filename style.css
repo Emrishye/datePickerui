@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: #f2f2f2; */
+  color: #333;
+  height: 100vh;
+  line-height: 1.5;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.wrapper {
+  max-width: 300px;
+}
+.wrapper .datepicker {
+  display: flex;
+  border: 1px solid black;
+  margin-bottom: 3px;
+  border-collapse: collapse;
+}
+.datepicker .inpu {
+  border-right: 1px solid black;
+}
+.datepicker input {
+  padding: 1rem;
+  border: none;
+  color: #333;
+  font-size: 1rem;
+}
+.datepicker .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.container .ui {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-bottom: none;
+  border-collapse: collapse;
+}
+
+.ui .dec {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 10px;
+  padding: 1rem;
+}
+.ui .dec .arrow::before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  left: 15px;
+  top: calc(50% - 3px);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 10px solid #333;
+  cursor: pointer;
+}
+.ui .dec .arrow::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  right: 15px;
+  top: calc(50% - 3px);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid #333;
+  cursor: pointer;
+}
+
+.ui .weekdays {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .ui .days {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 3px;
+} */
+
+.days .row {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+table {
+  width: 300px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  border-top: none;
+}
+table tr {
+  display: flex;
+  justify-content: space-between;
+  border-top: none;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  display: flex;
+  justify-content: center;
+  width: 14.28%; /* 100% / 7 days */
+  height: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+th {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  height: 20px;
+}
